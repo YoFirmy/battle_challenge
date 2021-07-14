@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require 'player'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -14,6 +15,10 @@ class Battle < Sinatra::Base
 
   get '/play' do
     erb(:play)
+  end
+
+  get '/attack' do
+    erb(:attack)
   end
 
   post '/names' do
