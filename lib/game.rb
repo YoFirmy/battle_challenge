@@ -9,8 +9,8 @@ class Game
     @current_turn = @player_1
   end
 
-  def attack(player)
-    player.receive_damage
+  def attack
+    opponent.receive_damage
   end
 
   def switch_turns
